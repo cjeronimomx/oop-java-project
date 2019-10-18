@@ -14,6 +14,7 @@ git clone https://github.com/cjeronimomx/oop-java-project.git
 
 ``
 git checkout -b cjeronimo
+git branch
 ``
 
 
