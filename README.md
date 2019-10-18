@@ -2,9 +2,21 @@
 > This is a java project for Oriented Programming Course
 
 
-## FISRT STEPS
 
-### Git clone
+### First steps
+1. **Clone project**
 
+``
 git clone https://github.com/cjeronimomx/oop-java-project.git
+``
+
+2. **Create your branch**
+
+``
+git checkout -b cjeronimo
+``
+
+
+
+
 
