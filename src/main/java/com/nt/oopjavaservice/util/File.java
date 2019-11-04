@@ -1,7 +1,8 @@
 package com.nt.oopjavaservice.util;
-
 import com.nt.oopjavaservice.domain.vo.ConsumeMsu;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 
@@ -59,4 +60,20 @@ public class File {
                 '}';
     }
 
+    public void read (){
+        try {
+            java.io.File file = new java.io.File(path.concat(name));
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String linea = null;
+
+            while ((linea = bufferedReader.readLine()) != null) {
+                System.out.println(linea);
+            }
+        }catch (Exception ex){
+            System.out.println(ex);
+        }
+    }
+
 }
+
