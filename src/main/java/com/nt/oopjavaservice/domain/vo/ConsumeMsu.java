@@ -8,12 +8,11 @@ public class ConsumeMsu {
     private LocalDateTime utc;
     private LocalDateTime local;
 
-    public ConsumeMsu() {
-    }
-
-    public ConsumeMsu(String lpar, int highest) {
+    public ConsumeMsu(String lpar, int highest, LocalDateTime utc, LocalDateTime local) {
         this.lpar = lpar;
         this.highest = highest;
+        this.utc = utc;
+        this.local = local;
     }
 
     public String getLpar() {

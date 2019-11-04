@@ -2,7 +2,10 @@ package com.nt.oopjavaservice.util;
 
 import com.nt.oopjavaservice.domain.vo.ConsumeMsu;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 
 public class File {
@@ -57,5 +60,26 @@ public class File {
                 ", received=" + received +
                 ", content=" + Arrays.toString(content) +
                 '}';
+    }
+
+
+    public void read() {
+        try {
+            java.io.File file = new java.io.File(path.concat(name));
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String linea = null;
+            ConsumeMsu consumeMSU = null;
+
+            while ((linea = bufferedReader.readLine()) != null) {
+                String campos[] = linea.split(",");
+
+                consumeMSU = new ConsumeMsu(campos[0], 1, LocalDateTime.now(), LocalDateTime.now());
+
+                System.out.println(consumeMSU);
+            }
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
     }
 }
