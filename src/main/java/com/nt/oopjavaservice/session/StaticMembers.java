@@ -11,7 +11,7 @@ public class StaticMembers {
         StaticMembers staticObject = new StaticMembers();
 
         normalObject.normalCounter = ++normalObject.normalCounter;
-        normalObject.staticCounter = ++normalObject.staticCounter;
+        ++StaticMembers.staticCounter;
 
         JOptionPane.showMessageDialog(null, normalObject.normalCounter);
         JOptionPane.showMessageDialog(null, staticObject.staticCounter);
@@ -25,4 +25,6 @@ public class StaticMembers {
     public static String greet(String nameParameter) {
         return "hello: " + nameParameter;
     }
+
+    public static  int test() { return 1;}
 }
