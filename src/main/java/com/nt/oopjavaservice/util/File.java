@@ -1,6 +1,6 @@
 package com.nt.oopjavaservice.util;
 
-import com.nt.oopjavaservice.domain.vo.ConsumeMsu;
+import com.nt.oopjavaservice.domain.vo.ConsumeMsuVo;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -12,7 +12,7 @@ public class File {
     private String name;
     private String path;
     private LocalDate received;
-    private ConsumeMsu content[];
+    private ConsumeMsuVo content[];
 
     public File(String name, String path, LocalDate received) {
         this.name = name;
@@ -44,11 +44,11 @@ public class File {
         this.received = received;
     }
 
-    public ConsumeMsu[] getContent() {
+    public ConsumeMsuVo[] getContent() {
         return content;
     }
 
-    public void setContent(ConsumeMsu[] content) {
+    public void setContent(ConsumeMsuVo[] content) {
         this.content = content;
     }
 
@@ -69,17 +69,18 @@ public class File {
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String linea = null;
-            ConsumeMsu consumeMSU = null;
+            ConsumeMsuVo consumeMSUVo = null;
 
             while ((linea = bufferedReader.readLine()) != null) {
                 String campos[] = linea.split(",");
 
-                consumeMSU = new ConsumeMsu(campos[0], 1, LocalDateTime.now(), LocalDateTime.now());
+                consumeMSUVo = new ConsumeMsuVo(campos[0], 1, LocalDateTime.now(), LocalDateTime.now());
 
-                System.out.println(consumeMSU);
+                System.out.println(consumeMSUVo);
             }
         } catch (Exception ex) {
             System.out.println(ex);
         }
+
     }
 }

@@ -2,13 +2,13 @@ package com.nt.oopjavaservice.domain.vo;
 
 import java.time.LocalDateTime;
 
-public class ConsumeMsu {
+public class ConsumeMsuVo {
     private String lpar;
     private int highest;
     private LocalDateTime utc;
     private LocalDateTime local;
 
-    public ConsumeMsu(String lpar, int highest, LocalDateTime utc, LocalDateTime local) {
+    public ConsumeMsuVo(String lpar, int highest, LocalDateTime utc, LocalDateTime local) {
         this.lpar = lpar;
         this.highest = highest;
         this.utc = utc;
