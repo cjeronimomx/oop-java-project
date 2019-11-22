@@ -1,12 +1,10 @@
 package com.nt.oopjavaservice.util;
 
-import com.nt.oopjavaservice.domain.vo.ConsumeMsu;
+import com.nt.oopjavaservice.domain.vo.ConsumeMsuVo;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.nio.channels.ScatteringByteChannel;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Arrays;
 
 public class File {
@@ -44,11 +42,11 @@ public class File {
         this.reveived = reveived;
     }
 
-    public ConsumeMsu[] getContent() {
+    public ConsumeMsuVo[] getContent() {
         return content;
     }
 
-    public void setContent(ConsumeMsu[] content) {
+    public void setContent(ConsumeMsuVo[] content) {
         this.content = content;
     }
 
@@ -63,7 +61,7 @@ public class File {
     }
 
     //* arreglo
-    private ConsumeMsu content[];
+    private ConsumeMsuVo content[];
 
     public  void read() {
         try {
